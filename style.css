@@ -14,6 +14,8 @@ html {
 body {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
+  /* max-width: 500px;
+  max-height: 500px; */
   height: 100vh;
   color: #333;
   background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
@@ -25,10 +27,12 @@ body {
 /* LAYOUT */
 main {
   position: relative;
-  width: 100rem;
-  height: 60rem;
+  width: 40em;
+  height: 25rem;
   background-color: rgba(255, 255, 255, 0.35);
+  -webkit-backdrop-filter: blur(200px);
   backdrop-filter: blur(200px);
+  -webkit-filter: blur();
   filter: blur();
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   border-radius: 9px;
@@ -38,7 +42,7 @@ main {
 
 .player {
   flex: 50%;
-  padding: 9rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,7 +52,7 @@ main {
 /* ELEMENTS */
 .name {
   position: relative;
-  font-size: 4rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
@@ -57,7 +61,7 @@ main {
 }
 
 .score {
-  font-size: 8rem;
+  font-size: 4rem;
   font-weight: 300;
   color: #c7365f;
   margin-bottom: auto;
@@ -83,20 +87,20 @@ main {
   border-radius: 9px;
   color: #fff;
   width: 65%;
-  padding: 2rem;
+  padding: 0.5rem;
   text-align: center;
   transition: all 0.75s;
 }
 
 .current-label {
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
   color: #ddd;
 }
 
 .current-score {
-  font-size: 3.5rem;
+  font-size: 1.5rem;
 }
 
 /* ABSOLUTE POSITIONED ELEMENTS */
@@ -108,7 +112,7 @@ main {
   background: none;
   border: none;
   font-family: inherit;
-  font-size: 1.8rem;
+  font-size: 1rem;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 400;
@@ -116,27 +120,28 @@ main {
 
   background-color: white;
   background-color: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 
-  padding: 0.7rem 2.5rem;
+  padding: 0.1rem 0.5rem;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
 .btn::first-letter {
-  font-size: 2.4rem;
+  font-size: 1rem;
   display: inline-block;
   margin-right: 0.7rem;
 }
 
 .btn--new {
-  top: 4rem;
+  top: 3.5rem;
 }
 .btn--roll {
-  top: 39.3rem;
+  top: 13rem;
 }
 .btn--hold {
-  top: 46.1rem;
+  top: 16rem;
 }
 
 .btn:active {
@@ -151,9 +156,9 @@ main {
 .dice {
   position: absolute;
   left: 50%;
-  top: 16.5rem;
+  top: 6.5rem;
   transform: translateX(-50%);
-  height: 10rem;
+  height: 5rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
 
@@ -169,3 +174,53 @@ main {
 .hidden {
   display: none;
 }
+
+@media screen and (min-width: 676px) {
+  main {
+    width: 100em;
+    height: 60rem;
+  }
+  .player {
+    padding: 9rem;
+  }
+  .name {
+    font-size: 4rem;
+  }
+  .score {
+    font-size: 8rem;
+  }
+  .current {
+  padding: 2rem;
+} 
+.current-label {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+
+}
+.current-score {
+  font-size: 3.5rem;
+}
+.btn {
+  font-size: 1.8rem;
+  padding: 0.7rem 2.5rem;
+}
+.btn::first-letter {
+  font-size: 2.4rem;
+}
+.btn--new {
+  top: 4rem;
+}
+.btn--roll {
+  top: 39.3rem;
+}
+.btn--hold {
+  top: 46.1rem;
+}
+.dice {
+  
+  top: 16.5rem;
+
+  height: 10rem;
+
+}
+;
