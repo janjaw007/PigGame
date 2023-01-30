@@ -175,7 +175,7 @@ main {
   display: none;
 }
 
-@media screen and (min-width: 676px) {
+@media screen and (min-width: 992px) {
   main {
     width: 100em;
     height: 60rem;
